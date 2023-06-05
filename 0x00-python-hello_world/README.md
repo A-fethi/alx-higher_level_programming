@@ -21,15 +21,10 @@ prints object-oriented programming with Python, followed by a new line.
 a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
 # 10. Linked list cycle
 a function in C that checks if a singly linked list has a cycle in it.
+<h1> Advanced Tasks </h1>
 # 11. Hello, write
 a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
 # 12. Compile
 a script that compiles a Python script file.
 # 13. ByteCode -> Python #1
-Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode: 
-'  3           0 LOAD_CONST               1 (98)
-              3 LOAD_FAST                0 (a)
-              6 LOAD_FAST                1 (b)
-              9 BINARY_POWER
-             10 BINARY_ADD
-             11 RETURN_VALUE'
+Python function def magic_calculation(a, b): 

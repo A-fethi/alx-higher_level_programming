@@ -19,8 +19,8 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """A public instance to return the current square area"""
@@ -69,7 +69,6 @@ class Square:
         """Set the position attribute."""
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                not all(isinstance(num, int) and
-                        num >= 0 for num in value)):
+                not all(isinstance(num, int) and num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value

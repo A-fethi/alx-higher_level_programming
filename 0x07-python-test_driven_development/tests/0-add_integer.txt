@@ -1,0 +1,44 @@
+Import "add_integer":
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test cases:
+
+Test One:
+	>>> add_integer(1, 2)
+	3
+
+Test Two:
+	>>> add_integer(100, -2)
+	98
+
+Test Three:
+	>>> add_integer(2)
+	100
+
+Test Four:
+	>>> add_integer(100.3, -2)
+	98
+
+Test Five:
+	>>> add_integer(-15, -156)
+	-171
+
+Test Six:
+	>>> add_integer(-14.6, -156.4)
+	-170
+
+Test Seven:
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Test Eight:
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Test Nine:
+	>>> add_integer("Abderrahmane", "Fethi")
+	Traceback (most recent call last):
+	TypeError: a must be an integer

@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""Module of "2-matrix_divided"."""
+
+
 def matrix_divided(matrix, div):
+    """
+    Divides all elements of a matrix.
+    """
     message = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")

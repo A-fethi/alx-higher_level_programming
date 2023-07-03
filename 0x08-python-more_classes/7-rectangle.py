@@ -68,7 +68,7 @@ class Rectangle:
             return string
         i = 0
         while i < self.__height:
-            string += str(self.print_symbol * self.__width)
+            string += str(self.print_symbol) * self.width
             if i < self.__height - 1:
                 string += "\n"
             i += 1

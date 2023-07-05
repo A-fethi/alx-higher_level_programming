@@ -47,24 +47,24 @@ Test Eight:
 	ValueError: shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
 
 Test Nine:
-	>>> print(lazy_matrix_mul([[1, 2], [5, 10]], "string"))
+	>>> print(lazy_matrix_mul([[1, 2], [5, 10]], "i am a string"))
 	Traceback (most recent call last):
-	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
+	ValueError: Scalar operands are not allowed, use '*' instead
 
 Test Ten:
-	>>> print(lazy_matrix_mul("string", [[1, 2], [5, 10]]))
+	>>> print(lazy_matrix_mul("i am a string", [[1, 2], [5, 10]]))
 	Traceback (most recent call last):
-	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
+	ValueError: Scalar operands are not allowed, use '*' instead
 
 Test Eleven:
-	>>> print(lazy_matrix_mul("string", "string"))
+	>>> print(lazy_matrix_mul("i am a string", "i am also a string"))
 	Traceback (most recent call last):
-	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
+	ValueError: Scalar operands are not allowed, use '*' instead
 
 Test Twelve:
 	>>> print(lazy_matrix_mul(None, None))
 	Traceback (most recent call last):
-	TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+	TypeError: Object arrays are not currently supported
 
 Test Thirteen:
 	>>> m_a = [[5, "6"], [7, 8]]
@@ -79,3 +79,4 @@ Test Fourteen:
 	>>> print(lazy_matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
 	ValueError: data type must provide an itemsize
+

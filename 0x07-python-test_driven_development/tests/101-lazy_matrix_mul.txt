@@ -49,17 +49,17 @@ Test Eight:
 Test Nine:
 	>>> print(lazy_matrix_mul([[1, 2], [5, 10]], "string"))
 	Traceback (most recent call last):
-	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
+	ValueError: Scalar operands are not allowed, use '*' instead
 
 Test Ten:
 	>>> print(lazy_matrix_mul("string", [[1, 2], [5, 10]]))
 	Traceback (most recent call last):
-	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
+	ValueError: Scalar operands are not allowed, use '*' instead
 
 Test Eleven:
 	>>> print(lazy_matrix_mul("string", "string"))
 	Traceback (most recent call last):
-	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
+	ValueError: Scalar operands are not allowed, use '*' instead
 
 Test Twelve:
 	>>> print(lazy_matrix_mul(None, None))

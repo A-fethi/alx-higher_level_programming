@@ -64,6 +64,10 @@ class TestMaxInteger(unittest.TestCase):
         list = ["Abderrahmane", "fethi", "z"]
         self.assertEqual(max_integer(list), "z")
 
+    def max_at_beginning(self):
+        """Max at beginning."""
+        list = [100, 50, 16, 45]
+        self.assertEqual(max_integer(list), 100)
 
 if __name__ == "__main__":
     unittest.main()

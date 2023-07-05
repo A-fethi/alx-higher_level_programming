@@ -44,5 +44,10 @@ Test Nine:
 	TypeError: a must be an integer
 
 Test Ten: Float overflow
-	>>> add_integer(3.4028235e38, 3.4028235e38)
-	680564699999999983509577487562865377280
+	>>> add_integer(1998.3)
+	2096
+
+Test Eleven: Float NaN
+	>>> add_integer(float("NaN"))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer

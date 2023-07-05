@@ -49,19 +49,33 @@ Test Eight:
 Test Nine:
 	>>> print(lazy_matrix_mul([[1, 2], [5, 10]], "string"))
 	Traceback (most recent call last):
-	ValueError: Scalar operands are not allowed, use '*' instead
+	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
 
 Test Ten:
 	>>> print(lazy_matrix_mul("string", [[1, 2], [5, 10]]))
 	Traceback (most recent call last):
-	ValueError: Scalar operands are not allowed, use '*' instead
+	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
 
 Test Eleven:
 	>>> print(lazy_matrix_mul("string", "string"))
 	Traceback (most recent call last):
-	ValueError: Scalar operands are not allowed, use '*' instead
+	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U6') dtype('<U6') dtype('<U6')
 
 Test Twelve:
 	>>> print(lazy_matrix_mul(None, None))
 	Traceback (most recent call last):
 	TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+
+Test Thirteen:
+	>>> m_a = [[5, "6"], [7, 8]]
+	>>> m_b = [[5, 6], [7, 8]]
+	>>> print(lazy_matrix_mul(m_a, m_b))
+	Traceback (most recent call last):
+	ValueError: data type must provide an itemsize
+
+Test Fourteen:
+	>>> m_a = [[5, 6], [7, 8]]
+	>>> m_b = [[5, "6"], [7, 8]]
+	>>> print(lazy_matrix_mul(m_a, m_b))
+	Traceback (most recent call last):
+	ValueError: data type must provide an itemsize

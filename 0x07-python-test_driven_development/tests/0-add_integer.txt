@@ -48,6 +48,11 @@ Test Ten: Float overflow
 	2096
 
 Test Eleven: Float NaN
-	>>> add_integer(float("NaN"))
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+Test Twelve:
+	>>> add_integer(2, float('NaN'))
 	Traceback (most recent call last):
 	ValueError: cannot convert float NaN to integer

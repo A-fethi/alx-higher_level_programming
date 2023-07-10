@@ -1,0 +1,69 @@
+Import "MyList"
+	>>> MyList = __import__('1-my_list').MyList
+
+Test cases:
+
+check inherit from list:
+	>>> issubclass(MyList, list)
+	True
+
+check for empty list:
+	>>> a = MyList()
+	>>> a.print_sorted()
+	[]
+
+check appending:
+	>>> a.append(1)
+	>>> a.append(2)
+	>>> a.append(3)
+	>>> a.append(4)
+	>>> print(a)
+	[1, 2, 3, 4]
+
+check ordered list:
+	>>> a.print_sorted()
+	[1, 2, 3, 4]
+
+check reversed list:
+	>>> a = MyList()
+	>>> a.append(4)
+	>>> a.append(3)
+	>>> a.append(2)
+	>>> a.append(1)
+	>>> print(a)
+	[4, 3, 2, 1]
+	>>> a.print_sorted()
+	[1, 2, 3, 4]
+	>>> print(a)
+	[4, 3, 2, 1]
+
+
+check one negative number:
+	>>> a.append(-8)
+	>>> a.append(6)
+	>>> print(a)
+	[4, 3, 2, 1, -8, 6]
+	>>> a.print_sorted()
+	[-8, 1, 2, 3, 4, 6]
+	>>> print(a)
+	[4, 3, 2, 1, -8, 6]
+
+
+check negative numbers:
+	>>> a = MyList()
+	>>> a.append(-89)
+	>>> a.append(-15)
+	>>> a.append(-1)
+	>>> a.append(-5)
+	>>> a.append(-9)
+	>>> print(a)
+	[-89, -15, -1, -5, -9]
+	>>> a.print_sorted()
+	[-89, -15, -9, -5, -1]
+	>>> print(a)
+	[-89, -15, -1, -5, -9]
+
+check too many arguments:
+	>>> a.print_sorted(5)
+	Traceback (most recent call last):
+	TypeError: print_sorted() takes 1 positional argument but 2 were given

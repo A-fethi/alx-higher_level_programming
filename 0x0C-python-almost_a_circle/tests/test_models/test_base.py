@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Defines unittest for base.py model."""
-import os
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle

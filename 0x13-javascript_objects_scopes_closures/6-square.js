@@ -10,7 +10,7 @@ class Square extends Squareinherit {
         if (c === undefined) {
           row = row + 'X';
         } else {
-          row = row + 'C';
+          row = row + c;
         }
         j++;
       }

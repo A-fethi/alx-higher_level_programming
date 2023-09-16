@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""lists all State objects from the database hbtn_0e_6_usa"""
+"""lists all State objects, and corresponding City objects,
+contained in the database hbtn_0e_101_usa"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State

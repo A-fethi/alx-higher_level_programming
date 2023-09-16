@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""adds the State object “Louisiana” to the database hbtn_0e_6_usa"""
+"""lists all City objects from the database hbtn_0e_101_usa"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
+from relationship_state import Base, State
+from relationship_city import City
 import sys
 
 if __name__ == "__main__":
@@ -10,8 +11,5 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_object = State(name="Louisiana")
-    session.add(new_object)
-    session.commit()
-    print(new_object.id)
-    session.close()
+    for city in session.query(City):
+        print(f'{city.id}: {city.name} -> {city.state.name}')

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""lists all State objects from the database hbtn_0e_6_usa"""
+"""creates the State “California” with the City “San Francisco”
+from the database hbtn_0e_100_usa"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State

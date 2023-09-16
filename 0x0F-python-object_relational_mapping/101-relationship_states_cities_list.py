@@ -2,8 +2,6 @@
 """lists all State objects from the database hbtn_0e_6_usa"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
-from model_city import City
 from relationship_state import Base, State
 from relationship_city import City
 import sys
@@ -14,7 +12,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for state in session.query(State):
-        print(f'{state.name}:')
+        print(f'{state.id}: {state.name}')
         for city in state.cities:
             print(f'    {city.id}: {city.name}')
-    session.close()

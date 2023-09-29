@@ -11,8 +11,11 @@ if __name__ == "__main__":
     r = requests.get(url)
     list_obj = r.json()
     i = 0
-    while i < 10:
-        sha = list_obj[i].get('sha')
-        author = list_obj[i].get('commit').get('author').get('name')
-        print(f"{sha}: {author}")
-        i = i + 1
+    try:
+        while i < 10:
+            sha = list_obj[i].get('sha')
+            author = list_obj[i].get('commit').get('author').get('name')
+            print(f"{sha}: {author}")
+            i = i + 1
+    except IndexError:
+        pass

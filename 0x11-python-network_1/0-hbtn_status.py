@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import urllib.request
 """Python script that fetches https://alx-intranet.hbtn.io/status
 using the package urllib"""
+import urllib.request
+
 
 if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
